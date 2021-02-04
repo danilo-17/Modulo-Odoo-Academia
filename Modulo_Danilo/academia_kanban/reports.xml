@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <report
+    id="report_todo_hours"
+    model="academia"
+    string="Informacion Academia"
+    report_type="qweb-pdf"
+    name="academia_kanban.report_academia"
+    attachment_use="False"
+    file="academia_kanban.report_academia" />
+</odoo>

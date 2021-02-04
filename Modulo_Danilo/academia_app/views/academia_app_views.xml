@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <odoo>
+    <!-- Action to open To-do Task list -->
+        <act_window
+            id="action_academia"
+            name="academia"
+            res_model="academia"
+            view_mode="tree,form"
+        />
+        <!-- top level menu: no parent -->
+        <menuitem
+            id="main_menu_academia"
+            name="Academia App"
+        />
+        <!-- A first level in the left side menu is needed before using action= attribute -->
+        <menuitem
+            id="l1_menu_academia"
+            name="Academia App"
+            parent="main_menu_academia"
+        />
+        <!-- Menu item to open To-do Task list -->
+        <menuitem
+            id="menu_academia"
+            name="Clase 1"
+            parent="l1_menu_academia"
+            action="action_academia"
+        />
+        <record id="view_tree_academia" model="ir.ui.view">
+            <field name="name">Academia Tree</field>
+            <field name="model">academia</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Nombre"/>
+                    <field name="DNI"/>
+                    <field name="Aula"/>
+                    <field name="notaTra"/>
+                    <field name="notaFa"/>
+                </tree>
+            </field>
+        </record>
+    </odoo>

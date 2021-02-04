@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id = "report_academia">
+        <t t-call = "web.html_container">
+            <t t-foreach = "docs" t-as = "o">
+                <t t-call = "web.external_layout">
+                    <div class = "page" >
+                        <h2>Alumno</h2>
+                        <p>Nombre alumno: <span t-field = "o.Nombre" /> </p>
+                        <p>DNI: <span t-field = "o.DNI" /> </p>
+                        <p>Aula:  <span t-field = "o.Aula" /> </p>
+                        <p>Nota anterior curso: <span t-field = "o.notaTra" /> </p>
+                        <p>Nota prueba acceso: <span t-field = "o.notaFa" /> </p>
+                        <p>cursos realizados: <span t-field = "o.cursos" /> </p>
+                        <p>TFG entregado: <span t-field = "o.trabajo_fin" /> </p> 
+                        <p>Telefono: <span t-field = "o.contacto" /></p>
+                        <p>Email: <span t-field = "o.email" /></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

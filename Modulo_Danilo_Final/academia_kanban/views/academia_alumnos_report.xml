@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id = "report_academia">
+        <t t-call = "web.html_container">
+            <t t-foreach = "docs" t-as = "o">
+                <t t-call = "web.external_layout">
+                    <div class = "page" >
+                        <h1 Style="color:black; font-family: Garamond, serif; border-bottom: 1px solid black;">Learn Language</h1><br></br>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Nombre: </b><span t-field = "o.Nombre" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Apellidos: </b><span t-field = "o.apellido" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>DNI: </b><span t-field = "o.DNI" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Aula:  </b><span t-field = "o.Aula" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Contacto: </b><span t-field = "o.contacto" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Email: </b><span t-field = "o.email" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Fecha Inscripción: </b><span t-field = "o.date_deadline" /> </p>                 
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Nivel: </b><span t-field = "o.cursos" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Nota anterior curso: </b><span t-field = "o.notaTra" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Nota prueba acceso: </b><span t-field = "o.notaFa" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Eso: </b><span t-field = "o.trabajo_fin" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Familia Numerosa: </b><span t-field = "o.fNumerosa" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Seguro Academico: </b><span t-field = "o.sEscolar" /> </p>
+                        <p Style="font-family: Georgia, serif;border-bottom: 1px solid black;"><b>Desempleado: </b><span t-field = "o.desempleado" /> </p><br></br><br></br><br></br>
+                        <p Style="margin-left:80%"><b>Presidente</b></p>
+                        <img t-att-src="'/academia_kanban/static/src/img/Firma_Harriet.png'" Style="width:200px; height:100px; margin-left:70%"/>
+                        
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

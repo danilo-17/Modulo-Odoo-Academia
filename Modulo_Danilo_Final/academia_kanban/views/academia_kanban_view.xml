@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <act_window id="action_academia_kanban" name="Academia Kanban Board" res_model="academia" view_mode="kanban,tree,form" />
+ <!-- Menu item to open To-do Kanban Board -->
+    <menuitem id="menu_academia_kanban" name="Academia Kanban Board" parent="academia_app.l1_menu_academia" sequence="30" action="action_academia_kanban" />
+    <record id="Academia Kanban" model="ir.ui.view">
+        <field name="name">Academia</field>
+        <field name="model">academia</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="kanban_state" default_order="date_deadline" quick_create="false">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card">
+                            <div class="oe_kanban_content">
+                                <h4>
+                                    <a type="open">
+                                        <field name="Nombre" />
+                                        <field name="DNI"/>  
+                                        <field name="Aula"/>    
+                                        <field name="notaTra"/>
+                                        <field name="notaFa"/>   
+                                    </a>
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <field name="user_id" />
+                                    </li>
+                                    <li>
+                                        <field name="date_deadline" />
+                                        <field name="cursos"/>
+                                        <field name="trabajo_fin"/>
+                                        <field name="contacto"/>
+                                        <field name="email"/>
+                                        <field name="horas_curso"/>
+                                    </li>
+                                </ul>
+                                <div class="oe_kanban_bottom_right">
+                                        <field name="kanban_state" widget="kanban_state_selection"/>
+                                </div>
+                                <div class="oe_kanban_footer_left">
+                                    <field name="priority" widget="priority"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>
